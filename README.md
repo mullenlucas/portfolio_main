@@ -13,7 +13,7 @@
 
 ## Information
 
-**This portfolio is a Work In Progress (WIP) to develop a professional-looking portfolio for future usage**
+**This project is a Work In Progress (WIP) to develop a professional-looking portfolio for future usage**
 
 ## Author
 
