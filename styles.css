@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 /* Mobile setup */
-
 @media (min-width: 400px) {
-
     .nav-bar {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 10px 12px;
-        justify-content: space-between;
-        max-width: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 12px;
+    justify-content: space-between;
+    max-width: 350px;
     }
 
     .headline {
