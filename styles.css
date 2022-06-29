@@ -2,14 +2,15 @@
 
 /* Mobile setup */
 @media (min-width: 400px) {
-    .nav-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 12px;
-    justify-content: space-between;
-    max-width: 350px;
-    }
+
+        .nav-bar {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px 12px;
+            justify-content: space-between;
+            max-width: 350px;
+        }
 
     .headline {
         background-image: url("./imgs/header-illsutration-mobile@1x.png");
@@ -28,7 +29,7 @@
     }
 
     .intro-txt h2 {
-        font-family: 'Inter';
+        font-family: 'Inter', sans-serif;;
         font-style: normal;
         font-weight: 700;
         font-size: 40px;
@@ -45,7 +46,7 @@
     }
 
     .main-headline-txt p {
-        font-family: 'Inter';
+        font-family: 'Inter', sans-serif;;
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -57,7 +58,7 @@
     }
 
     .title {
-        font-family: 'Inter';
+        font-family: 'Inter', sans-serif;;
         font-style: normal;
         font-weight: 600;
         font-size: 20px;
