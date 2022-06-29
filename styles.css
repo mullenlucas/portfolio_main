@@ -2,14 +2,14 @@
 
 /* Mobile setup */
 @media (min-width: 400px) {
-			.nav-bar {
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-				padding: 10px 12px;
-				justify-content: space-between;
-				max-width: 350px;
-			}
+  .nav-bar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 10px 12px;
+	justify-content: space-between;
+	max-width: 350px;
+  }
 
 	.headline {
 		background-image: url("./imgs/header-illsutration-mobile@1x.png");
