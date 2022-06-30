@@ -22,7 +22,6 @@
     font-size: 20px;
     line-height: 28px;
     color: #28352f;
-
   }
 
   .main-container {
@@ -46,7 +45,8 @@
     height: 192px;
   }
 
-  .intro-txt h1, h2 {
+  .intro-txt h1,
+  h2 {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
