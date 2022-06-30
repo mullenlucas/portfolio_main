@@ -2,7 +2,6 @@
 
 /* Mobile setup */
 @media (min-width: 375px) and (max-width: 600px) {
-
   .nav-bar {
     display: flex;
     flex-direction: row;
@@ -12,7 +11,7 @@
     max-width: 600px;
   }
 
-  .nav-bar a{
+  .nav-bar a {
     text-decoration: none;
   }
 
@@ -23,15 +22,16 @@
     font-size: 20px;
     line-height: 28px;
   }
+
   .main-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
+
   .headline {
     background-image: url("./imgs/header-illsutration-mobile@1x.png");
     background-repeat: no-repeat;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
