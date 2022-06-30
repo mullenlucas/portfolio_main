@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 10px 12px;
+    padding: 10px 42px;
     justify-content: space-between;
     max-width: 600px;
   }
@@ -21,6 +21,8 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 28px;
+    color: #28352f;
+
   }
 
   .main-container {
@@ -44,7 +46,7 @@
     height: 192px;
   }
 
-  .intro-txt h1 {
+  .intro-txt h1, h2 {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
