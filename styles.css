@@ -244,3 +244,24 @@
 
   /* Tamana */
 }
+.contact form ul li input {
+  background: #FFFFFF;
+border: 1px solid #D0D9D4;
+border-radius: 4px;
+width: 327px;
+height: 48px;
+margin-bottom: 24px;
+}
+
+.contact form ul li textarea {
+  background: #FFFFFF;
+  border: 1px solid #60C095;
+  border-radius: 4px;
+  width: 327px;
+  height: 114;
+  margin-bottom: 24px;
+}
+
+.contact form button {
+  margin-bottom: 46px;
+}
