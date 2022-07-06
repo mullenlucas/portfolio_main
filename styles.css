@@ -227,10 +227,6 @@
     align-items: center;
   }
 
-  /* Paste from here */
-
-  /* Mohamed */
-
   .contact form ul {
     display: flex;
     flex-direction: column;
@@ -243,57 +239,55 @@
     list-style: none;
   }
 
-  /* Tamana */
-}
+  .contact form ul li input {
+    background: #fff;
+    border: 1px solid #d0d9d4;
+    border-radius: 4px;
+    width: 327px;
+    height: 48px;
+    margin-bottom: 24px;
+  }
 
-.contact form ul li input {
-  background: #fff;
-  border: 1px solid #d0d9d4;
-  border-radius: 4px;
-  width: 327px;
-  height: 48px;
-  margin-bottom: 24px;
-}
+  .contact form ul li input::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 15px 16px;
+    color: #6b778c;
+  }
 
-.contact form ul li input::placeholder {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-  padding: 15px 16px;
-  color: #6b778c;
-}
+  .contact form ul li textarea {
+    background: #fff;
+    border: 1px solid #60c095;
+    border-radius: 4px;
+    width: 327px;
+    height: 114;
+    margin-bottom: 24px;
+  }
 
-.contact form ul li textarea {
-  background: #fff;
-  border: 1px solid #60c095;
-  border-radius: 4px;
-  width: 327px;
-  height: 114;
-  margin-bottom: 24px;
-}
+  .contact form ul li textarea::placeholder {
+    padding: 12px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #091e42;
+  }
 
-.contact form ul li textarea::placeholder {
-  padding: 12px;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-  color: #091e42;
-}
+  .contact form button {
+    margin-bottom: 46px;
+  }
 
-.contact form button {
-  margin-bottom: 46px;
-}
-
-.contact p {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  text-align: center;
-  color: #42526e;
+  .contact p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #42526e;
+  }
 }
