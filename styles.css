@@ -228,6 +228,7 @@
   }
 
   /* Paste from here */
+
   /* Mohamed */
 
   .contact form ul {
@@ -244,17 +245,18 @@
 
   /* Tamana */
 }
+
 .contact form ul li input {
-  background: #FFFFFF;
-border: 1px solid #D0D9D4;
-border-radius: 4px;
-width: 327px;
-height: 48px;
-margin-bottom: 24px;
+  background: #fff;
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
+  width: 327px;
+  height: 48px;
+  margin-bottom: 24px;
 }
 
 .contact form ul li input::placeholder {
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -264,8 +266,8 @@ margin-bottom: 24px;
 }
 
 .contact form ul li textarea {
-  background: #FFFFFF;
-  border: 1px solid #60C095;
+  background: #fff;
+  border: 1px solid #60c095;
   border-radius: 4px;
   width: 327px;
   height: 114;
@@ -274,7 +276,7 @@ margin-bottom: 24px;
 
 .contact form ul li textarea::placeholder {
   padding: 12px;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -285,13 +287,13 @@ margin-bottom: 24px;
 .contact form button {
   margin-bottom: 46px;
 }
-.contact p{
-  font-family: 'Inter';
+
+.contact p {
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
   text-align: center;
   color: #42526e;
-  
 }
