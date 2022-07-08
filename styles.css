@@ -83,6 +83,82 @@
   padding: 32px 0;
 }
 
+.media-imgs {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.media-imgs ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.inner-card-about-me {
+  height: 352px;
+  background: #EBF0EE;
+  border: 1px solid #C1C7D0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner-card-about-me h3 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #344563;
+  margin-top: 64px;
+}
+
+.about-me-card-icon-circle {
+  width: 80px;
+  height: 80px;
+  background: #FFFFFF;
+  box-shadow: 0px 16px 24px rgba(37, 47, 137, 0.08);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.about-me-about-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-me-card-buttons ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.about-me-card-buttons ul li {
+  background: #FFFFFF;
+  border-radius: 8px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #36B37E;
+  padding: 12px; 
+}
+
 @media (min-width: 768px) {
 
   header {
@@ -95,8 +171,7 @@
     background-repeat: no-repeat;
     background-position: center bottom 100%;
     background-size: cover;
-    height: 1434.3px;
-    /* margin-bottom: 29px; */
+    height: 1900px;
   }
 
   .headline {
@@ -154,27 +229,22 @@
     align-self: center;
   }
 
-  .media-imgs {
-    display: flex;
-    justify-content: center;
-    margin-top: 24px;
-  }
-
-  .media-imgs ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-  }
-
   .works-sec{
-    margin-top: 120px;
+    margin-top: 140px;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
+  }
+
+  .section-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    color: #172B4D;
   }
   
   .div-img {
@@ -196,11 +266,15 @@
     display: grid;
     background-color: #ebf0ee;
     border-radius: 8px;
-    width: 327px;
+    width: 369px;
     height: 474px;
     border-style: solid;
     border-width: thin;
     border-color: #d0d9d4;
+  }
+
+  #about-me{
+    margin-top: 360px;
   }
 
   .top-about-me {
@@ -212,6 +286,102 @@
     align-items: center;
     margin-top: -10%;
     /* height: 240px; */
+  }
+
+  .cards-about-me {
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    justify-content: center;
+  }
+
+  .inner-card-about-me {
+    width: 369px;
+  }
+
+  .contact {
+    background-image: url("./imgs/illustration-1-contact-form-desktop.svg"), url("./imgs/illustration-2-contact-form-desktop.svg"), url("./imgs/illustratoin-3-contact-form-desktop.svg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left bottom, left 20% bottom 20%, right;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 12px;
+    column-gap: 24px;
+    margin-top: 100px;
+  }
+
+  .contact h2 {
+    width: 25%;
+    font-size: 30px;
+    margin-top: 42px;
+  }
+
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    
+  }
+
+  .contact form ul {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 0;
+    padding: 0;
+    width: 684px;
+  }
+
+  .contact form ul li {
+    list-style: none;
+  }
+
+  .contact form ul li input {
+    background: #fff;
+    border: 1px solid #d0d9d4;
+    border-radius: 4px;
+    width: 98%;
+    height: 48px;
+    margin-bottom: 24px;
+  }
+
+  .contact form ul li input::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 15px 16px;
+    color: #6b778c;
+  }
+
+  .contact form ul li textarea {
+    background: #fff;
+    border: 1px solid #60c095;
+    border-radius: 4px;
+    width: 98%;
+    height: 114;
+    margin-bottom: 24px;
+  }
+
+  .contact form ul li textarea::placeholder {
+    padding: 12px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #091e42;
+  }
+
+  .contact form button {
+    margin-bottom: 46px;
+  }
+
+  footer p {
+    display: none;
+    visibility: hidden;
   }
 
 }
@@ -293,21 +463,6 @@
     height: 164px;
   }
 
-  .media-imgs {
-    display: flex;
-    width: 200px;
-    justify-content: space-between;
-  }
-
-  .media-imgs ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-  }
-
   #works-txt-id {
     width: 340px;
     font-family: 'Inter', sans-serif;
@@ -325,6 +480,10 @@
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 12px;
+  }
+
+  .works-sec{
+    margin-top: 40px;
   }
 
   .main-container-works {
@@ -354,13 +513,26 @@
     align-items: center;
   }
 
+  .cards-about-me {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    align-items: center;
+    margin-top: 12px;
+  }
+
+  .inner-card-about-me {
+    width: 327px;
+  }
+
   .contact {
     background-image: url("./imgs/illustration-contact-form.svg");
-    background-position: right bottom;
+    background-position: right bottom 6%;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 12px;
   }
 
   .contact form ul {
@@ -417,7 +589,12 @@
     margin-bottom: 46px;
   }
 
-  .contact p {
+  footer hr {
+    display: none;
+    visibility: hidden;
+  }
+
+  footer p {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
