@@ -205,6 +205,11 @@
     color: #344563;
   }
 
+  @keyframes menu-rotations {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+
   .intro-txt {
     margin-top: 340px;
   }
@@ -218,6 +223,19 @@
     text-align: center;
     letter-spacing: 0.37px;
     margin-top: -36px;
+  }
+
+  .intro-txt h1 {
+    animation-name: menu-rotations;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+  }
+
+  .intro-txt h2 {
+    animation-name: menu-rotations;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 2s;
   }
 
   .main-headline-txt {
