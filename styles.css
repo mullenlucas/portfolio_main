@@ -131,6 +131,12 @@
   margin-top: 40px;
 }
 
+.about-me-card-icon-circle {
+  transition: transform 3s ease-in;
+}
+.about-me-card-icon-circle:hover {
+  transform: scale(2);
+}
 .about-me-about-buttons {
   display: flex;
   justify-content: space-between;
