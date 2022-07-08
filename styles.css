@@ -1,5 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
+.wave-txt {
+  color: #172b4d;
+}
+
+.desc-txt {
+  color: #36b37f;
+}
+
+.green-button {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  background: #36b37f;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding: 12px;
+}
+
+.green-button:hover {
+  background: #36b37f;
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+  border-radius: 4px;
+}
+
+.green-button:active {
+  background: #008552;
+  border-radius: 4px;
+}
+
+.grey-bckgd {
+  height: 222px;
+}
+
+.card-contents {
+  background-color: white;
+  border-radius: 8px;
+  height: 252px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-subt h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  color: #3a4a42;
+}
+
+.card-buttons ul {
+  list-style-type: none;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-buttons ul li {
+  border: none;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  padding: 8px 12px 8px 12px;
+  background-color: #ebf0ee;
+  color: #3a4a42;
+}
+
+.card-see-prjct {
+  display: flex;
+  justify-content: center;
+  padding: 32px 0;
+}
+
 @media (min-width: 768px) {
 
   header {
@@ -58,14 +141,6 @@
     margin-top: -36px;
   }
 
-  .wave-txt {
-    color: #172b4d;
-  }
-
-  .desc-txt {
-    color: #36b37f;
-  }
-
   .main-headline-txt {
     font-family: 'Inter';
     font-style: normal;
@@ -96,6 +171,10 @@
 
   .works-sec{
     margin-top: 120px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
   
   .div-img {
@@ -104,6 +183,37 @@
     margin-right: auto;
     padding-bottom: 12px;
   }
+
+  .main-container-works {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 32px;
+  }
+
+  .grid-container-works {
+    display: grid;
+    background-color: #ebf0ee;
+    border-radius: 8px;
+    width: 327px;
+    height: 474px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #d0d9d4;
+  }
+
+  .top-about-me {
+    background-image: url("./imgs/illustration-about-me-1-desktop.svg"), url("./imgs/illustration-about-me-2-desktop.svg");
+    background-position: right, left bottom;
+    background-repeat: no-repeat, no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10%;
+    /* height: 240px; */
+  }
+
 }
 
 /* Mobile setup */
@@ -171,14 +281,6 @@
     text-align: center;
   }
 
-  .wave-txt {
-    color: #172b4d;
-  }
-
-  .desc-txt {
-    color: #36b37f;
-  }
-
   .main-headline-txt p {
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -240,92 +342,10 @@
     border-style: solid;
     border-width: thin;
     border-color: #d0d9d4;
-
-    /* grid-gap: 10px; */
-  }
-
-  .card-flex-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .grey-bckgd {
-    height: 222px;
-  }
-
-  .card-contents {
-    background-color: white;
-    border-radius: 8px;
-    height: 252px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card-subt h3 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    text-align: center;
-    color: #3a4a42;
-  }
-
-  .card-buttons ul {
-    list-style-type: none;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .card-buttons ul li {
-    border: none;
-    border-radius: 4px;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    padding: 8px 12px 8px 12px;
-    background-color: #ebf0ee;
-    color: #3a4a42;
-  }
-
-  .card-see-prjct {
-    display: flex;
-    justify-content: center;
-    padding: 32px 0;
-  }
-
-  .green-button {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 24px;
-    background: #36b37f;
-    border-radius: 4px;
-    border: none;
-    color: white;
-    text-align: center;
-    letter-spacing: 0.03em;
-    padding: 12px;
-  }
-
-  .green-button:hover {
-    background: #36b37f;
-    box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
-    border-radius: 4px;
-  }
-
-  .green-button:active {
-    background: #008552;
-    border-radius: 4px;
   }
 
   /* Resource: https://www.w3schools.com/css/css3_backgrounds.asp */
-  #about-me {
+  .top-about-me {
     background-image: url("./imgs/illustration1-aboutme-mobile.svg"), url("./imgs/illustration2-aboutme-mobile.svg");
     background-position: right top, left bottom;
     background-repeat: no-repeat, no-repeat;
