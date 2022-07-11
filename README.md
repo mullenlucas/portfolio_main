@@ -13,7 +13,7 @@
 
 ## Website
 
-Click (this link)[https://mullenlucas.github.io/portfolio_main/] to access the portfolio website hosted on Github Pages !
+Click [this link](https://mullenlucas.github.io/portfolio_main/) to access the portfolio website hosted on Github Pages !
 
 ## Information
 
