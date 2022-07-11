@@ -11,6 +11,10 @@
 - CSS
 - Linters for html&css
 
+## Website
+
+Click [this link](https://mullenlucas.github.io/portfolio_main/) to access the portfolio website hosted on Github Pages !
+
 ## Information
 
 **This project is a Work In Progress (WIP) to develop a professional-looking portfolio for future usage**
