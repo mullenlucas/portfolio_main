@@ -1,6 +1,10 @@
 const hambIcon = document.getElementById('hamburgerIcon');
 const closeIcon = document.getElementById('closeIcon');
 const menuItems = document.getElementById('myMenuItems');
+const title = document.querySelector('.title');
+const sections = document.querySelectorAll('section:not(.main-container)');
+const footer = document.querySelector('footer');
+const toggleDivs = document.querySelector('.headline:not(.first-child)');
 
 // Operation when SHOWING items
 const showItems = () => {
@@ -10,6 +14,13 @@ const showItems = () => {
   closeIcon.style.visibility = 'visible';
   menuItems.style.display = 'flex';
   menuItems.style.visibility = 'visible';
+  title.style.visibility = 'hidden';
+  for (section of sections) {
+    section.style.visibility = 'hidden';
+  }
+  footer.style.visibility = 'hidden';
+  footer.style.display = 'none';
+  toggleDivs.style.visibility = 'hidden';
 };
 // Operation when HIDING items
 const hideItems = () => {
@@ -19,6 +30,13 @@ const hideItems = () => {
   hambIcon.style.visibility = 'visible';
   menuItems.style.display = 'none';
   menuItems.style.visibility = 'hidden';
+  title.style.visibility = 'visible';
+  for (section of sections) {
+    section.style.visibility = 'visible';
+  }
+  footer.style.visibility = 'visible';
+  footer.style.display = 'block';
+  toggleDivs.style.visibility = 'visible';
 };
 // Handling hamburgerMenu open/close behavior
 /* eslint-disable no-unused-vars */
