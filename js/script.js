@@ -20,3 +20,18 @@ const hideItems = function () {
   menuItems.style.display = "none";
   menuItems.style.visibility = "hidden";
 }
+// Handling hamburgerMenu open/close behavior
+const hamburgerMenu = function () {
+  if (hambIcon.style.display === "block") {
+    showItems()
+  } else {
+    hideItems()
+  }
+}
+// Handling hamburgerMenu open/close behavior when clicking item
+const adaptHamburgerMenu = function (){
+  const menuItems = document.getElementById("myMenuItems")
+  if (menuItems.style.display === "flex") {
+    hideItems()
+  }
+}
