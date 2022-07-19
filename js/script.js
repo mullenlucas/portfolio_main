@@ -15,9 +15,9 @@ const showItems = () => {
   menuItems.style.display = 'flex';
   menuItems.style.visibility = 'visible';
   title.style.visibility = 'hidden';
-  for (section of sections) {
-    section.style.visibility = 'hidden';
-  }
+  sections.forEach((element) => {
+    element.style.visibility = 'hidden';
+  });
   footer.style.visibility = 'hidden';
   footer.style.display = 'none';
   toggleDivs.style.visibility = 'hidden';
@@ -31,9 +31,9 @@ const hideItems = () => {
   menuItems.style.display = 'none';
   menuItems.style.visibility = 'hidden';
   title.style.visibility = 'visible';
-  for (section of sections) {
-    section.style.visibility = 'visible';
-  }
+  sections.forEach((element) => {
+    element.style.visibility = 'visible';
+  });
   footer.style.visibility = 'visible';
   footer.style.display = 'block';
   toggleDivs.style.visibility = 'visible';
