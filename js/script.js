@@ -3,7 +3,7 @@ const closeIcon = document.getElementById('closeIcon');
 const menuItems = document.getElementById('myMenuItems');
 
 // Operation when SHOWING items
-const showItems = function () {
+const showItems = () => {
   hambIcon.style.display = 'none';
   hambIcon.style.visibility = 'hidden';
   closeIcon.style.display = 'block';
@@ -12,7 +12,7 @@ const showItems = function () {
   menuItems.style.visibility = 'visible';
 };
 // Operation when HIDING items
-const hideItems = function () {
+const hideItems = () => {
   closeIcon.style.display = 'none';
   closeIcon.style.visibility = 'hidden';
   hambIcon.style.display = 'block';
@@ -21,7 +21,7 @@ const hideItems = function () {
   menuItems.style.visibility = 'hidden';
 };
 // Handling hamburgerMenu open/close behavior
-const hamburgerMenu = function () {
+const hamburgerMenu = () => {
   if (hambIcon.style.display === 'block') {
     showItems();
   } else {
@@ -29,7 +29,7 @@ const hamburgerMenu = function () {
   }
 };
 // Handling hamburgerMenu open/close behavior when clicking item
-const adaptHamburgerMenu = function () {
+const adaptHamburgerMenu = () => {
   const menuItems = document.getElementById('myMenuItems');
   if (menuItems.style.display === 'flex') {
     hideItems();
