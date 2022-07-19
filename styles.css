@@ -3,11 +3,14 @@
 #hamburgerIcon {
   display: block;
   visibility: visible;
+  font-size: 24px;
 }
 
 #closeIcon {
   display: none;
   visibility: hidden;
+  font-size: 24px;
+  color: #67798e;
 }
 
 .menu-header-items {
@@ -456,8 +459,12 @@
 
   .menu-header-items {
     flex-direction: column;
-    align-self: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
     background-color: #fff;
+    height: 755px;
+    width: 375px;
+    margin-top: -24px;
   }
 
   .menu-header-items li a {
