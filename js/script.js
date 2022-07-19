@@ -21,7 +21,7 @@ const hideItems = () => {
   menuItems.style.visibility = 'hidden';
 };
 // Handling hamburgerMenu open/close behavior
-/*exported modal*/
+/* eslint-disable no-unused-vars */
 const hamburgerMenu = () => {
   if (hambIcon.style.display === 'block') {
     showItems();
@@ -30,13 +30,14 @@ const hamburgerMenu = () => {
   }
 };
 // Handling hamburgerMenu open/close behavior when clicking item
-/*exported modal*/
+/* exported modal */
 const adaptHamburgerMenu = () => {
   const menuItems = document.getElementById('myMenuItems');
   if (menuItems.style.display === 'flex') {
     hideItems();
   }
 };
+/* eslint-enable no-unused-vars */
 /* When changing screen-size after closing the hamburger menu
 (therefore, hiding the "menuItems" list)
 so the items remain hidden on desktop.
