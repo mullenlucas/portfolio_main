@@ -456,6 +456,16 @@
     width: 375px;
   }
 
+  .menu-header-items {
+    flex-direction: column;
+    align-self: flex-start;
+    background-color: #fff;
+  }
+  
+  .menu-header-items li a {
+    font-size: 32px;
+  }
+
   .intro-txt .main-headline-txt {
     width: 327px;
     height: 192px;
