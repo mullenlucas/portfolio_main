@@ -191,7 +191,6 @@
 }
 
 @media (min-width: 768px) {
-
   header {
     display: none;
     visibility: hidden;
@@ -376,7 +375,7 @@
     border: 1px solid #60c095;
     border-radius: 4px;
     width: 98%;
-    height: 114;
+    height: 114px;
     margin-bottom: 24px;
   }
 
@@ -397,7 +396,6 @@
 
 /* Mobile setup */
 @media (min-width: 375px) and (max-width: 767px) {
-
   .headline #myMenuItems {
     display: none;
     visibility: hidden;
@@ -461,7 +459,7 @@
     align-self: flex-start;
     background-color: #fff;
   }
-  
+
   .menu-header-items li a {
     font-size: 32px;
   }
@@ -601,7 +599,7 @@
     border: 1px solid #60c095;
     border-radius: 4px;
     width: 327px;
-    height: 114;
+    height: 114px;
     margin-bottom: 24px;
   }
 
