@@ -35,3 +35,21 @@ const adaptHamburgerMenu = function (){
     hideItems()
   }
 }
+/* When changing screen-size after closing the hamburger menu (therefore, hiding the "menuItems" list)
+the items remain hidden on desktop. 
+This shouldn't really be a problem since users wouldn't be browsing from one screen size to another,
+in the same session,
+but just to make the code function properly in such unrealistic scenarios, this fix is added */
+
+const x = window.matchMedia("(min-width: 768px)")
+
+x.onchange = (e) => {
+  const menuItems = document.getElementById("myMenuItems")
+  if (e.matches) {
+    menuItems.style.display = "flex";
+    menuItems.style.visibility = "visible";
+  } else {
+    menuItems.style.display = "none";
+    menuItems.style.visibility = "hidden";
+  }
+}
