@@ -5,31 +5,33 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	
 	<title>Portfolio Project</title>
 </head>
 <body>
-	<header>
+	<header id="myLogo" class="nav-bar">
 	<nav class="nav-bar">
-		<a href="#" onClick="return false;">
-		<p class="title">Welcome</p>
+		<a href="#" onClick="return false;" class="title">
+			Welcome
 		</a>
-		<a class="icon">
-			<i class="fa fa-bars"></i>
+		<a class="icon" onClick="hamburgerMenu()">
+			<i id="hamburgerIcon" class="fa-solid fa-bars"></i>
+			<i id="closeIcon" class="fa-solid fa-xmark"></i>
 		</a>
 	</nav>
 	</header>
 	<section class="main-container">
 		<div class="headline">
-			<ul class="menu-header-items">
+			<ul class="menu-header-items" id="myMenuItems">
 				<li>
-					<a href="#"> Portfolio </a>
+					<a href="#works-link" class="menuItem" onClick="adaptHamburgerMenu()"> Portfolio </a>
 				</li>
 				<li>
-					<a href="#"> About </a>
+					<a href="#about-me" class="menuItem" onClick="adaptHamburgerMenu()"> About </a>
 				</li>
 				<li>
-					<a href="#"> Contact </a>
+					<a href="#contact-link" class="menuItem" onClick="adaptHamburgerMenu()"> Contact </a>
 				</li>
 			</ul>
 			<div class="intro-txt">
@@ -63,7 +65,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="works-sec">
+	<section class="works-sec" id="works-link">
 		<div class="works-title-flex">
 			<h2 class="section-title" id="works-txt-id">My Recent Works</h2>
 			<img class="div-img" src="imgs/Indicator.png" alt="div-img">
@@ -330,7 +332,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="contact">
+	<section class="contact" id="contact-link">
 		<h2 class="section-title">I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
 		<form action="https://formspree.io/f/xoqroeve" method="POST" id="contact-form-id">
 			<ul>
@@ -375,5 +377,6 @@
 		<p>mullenlucas@gmail.com</p>
 	</footer>
 	
+	<script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>

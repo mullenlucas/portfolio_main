@@ -1,5 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
+#hamburgerIcon {
+  display: block;
+  visibility: visible;
+  font-size: 24px;
+}
+
+#closeIcon {
+  display: none;
+  visibility: hidden;
+  font-size: 24px;
+  color: #67798e;
+}
+
+.menu-header-items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 42px;
+  padding-top: 2%;
+}
+
+.menu-header-items li a {
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #344563;
+}
+
 .wave-txt {
   color: #172b4d;
 }
@@ -184,27 +218,6 @@
     justify-content: center;
   }
 
-  .menu-header-items {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 42px;
-    padding-top: 2%;
-  }
-
-  .menu-header-items li a {
-    text-decoration: none;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 20px;
-    color: #344563;
-  }
-
   .intro-txt {
     margin-top: 340px;
   }
@@ -365,7 +378,7 @@
     border: 1px solid #60c095;
     border-radius: 4px;
     width: 98%;
-    height: 114;
+    height: 114px;
     margin-bottom: 24px;
   }
 
@@ -386,7 +399,12 @@
 
 /* Mobile setup */
 @media (min-width: 375px) and (max-width: 767px) {
-  header {
+  .headline #myMenuItems {
+    display: none;
+    visibility: hidden;
+  }
+
+  #myLogo {
     display: block;
     visibility: visible;
   }
@@ -439,9 +457,17 @@
     width: 375px;
   }
 
-  .headline ul {
-    display: none;
-    visibility: hidden;
+  .menu-header-items {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #fff;
+    width: 375px;
+    margin-top: -24px;
+  }
+
+  .menu-header-items li a {
+    font-size: 32px;
   }
 
   .intro-txt .main-headline-txt {
@@ -579,7 +605,7 @@
     border: 1px solid #60c095;
     border-radius: 4px;
     width: 327px;
-    height: 114;
+    height: 114px;
     margin-bottom: 24px;
   }
 
