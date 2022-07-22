@@ -19,44 +19,47 @@ const popupInfo = [
 
 export const popupData = [
   {
-    id: 1,
+    index: 1,
+    idx: "cP1",
     subTitle: subTitle,
-    ftimg: "./imgs/Snapshot_Desktop.png",
+    ftimg: "./imgs/Snapshoot_Desktop.png",
     badges: ["Codekit", "GitHub", "Javacript", "Bootstrap", "Terminal", "Codepen"],
     p: pContent
   },
   {
-    id: 2,
+    index: 2,
+    idx: "cP2",
     subTitle: subTitle,
-    ftimg: "./imgs/Snapshot_Desktop.png",
+    ftimg: "./imgs/Snapshoot_Desktop.png",
     badges: ["Codekit", "GitHub", "Javacript", "Bootstrap", "Terminal", "Codepen"],
     p: pContent
   },
   {
-    id: 3,
+    index: 3,
+    idx: "cP3",
     subTitle: subTitle,
-    ftimg: "./imgs/Snapshot_Desktop.png",
+    ftimg: "./imgs/Snapshoot_Desktop.png",
     badges: ["Codekit", "GitHub", "Javacript", "Bootstrap", "Terminal", "Codepen"],
     p: pContent
   },
   {
-    id: 4,
+    idx: "cP4",
     subTitle: subTitle,
-    ftimg: "./imgs/Snapshot_Mobile.png",
+    ftimg: "./imgs/Snapshoot_Mobile.png",
     badges: ["Ruby on rails", "css", "Javascript"],
     p: pContent
   },
   {
-    id: 5,
+    idx: "cP5",
     subTitle: subTitle,
-    ftimg: "./imgs/Snapshot_Mobile.png",
+    ftimg: "./imgs/Snapshoot_Mobile.png",
     badges: ["Ruby on rails", "css", "Javascript"],
     p: pContent
   },
   {
-    id: 6,
+    idx: "cP6",
     subTitle: subTitle,
-    ftimg: "./imgs/Snapshot_Mobile.png",
+    ftimg: "./imgs/Snapshoot_Mobile.png",
     badges: ["Ruby on rails", "css", "Javascript"],
     p: pContent
   },

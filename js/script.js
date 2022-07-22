@@ -78,60 +78,106 @@ x.onchange = (e) => {
   }
 };
 
-const worksContainer = document.createElement("div")
-worksContainer.setAttribute('class', 'main-container-works')
-let worksHtmlContainer = ""
-popupData.forEach( () => {
-  worksHtmlContainer += `
-  <div class="grid-container-works">
-					<div class="grey-bckgd"></div>
-					<div class="card-contents">
-					<div class="card-subt">
-						<h3>Multi-Post Stories Gain+Glory</h3>
-					</div>
-					<div class="card-buttons">
-						<ul>
-							<li>
-								Ruby on rails
-							</li>
-							<li>
-								css
-							</li>
-							<li>
-								JavaScript
-							</li>
-							<li>
-								html
-							</li>
-						</ul>
-					</div>
-					<div class="card-see-prjct">
-						<button class="green-button" id="cProject${i}" type="button">See Project</button>
-					</div>
-					</div>
-			</div>
-  `
-})
+// const worksContainer = document.createElement("div")
+// worksContainer.setAttribute('class', 'main-container-works')
+// let worksHtmlContainer = ""
+// popupData.forEach( () => {
+//   worksHtmlContainer += `
+//   <div class="grid-container-works">
+// 					<div class="grey-bckgd"></div>
+// 					<div class="card-contents">
+// 					<div class="card-subt">
+// 						<h3>Multi-Post Stories Gain+Glory</h3>
+// 					</div>
+// 					<div class="card-buttons">
+// 						<ul>
+// 							<li>
+// 								Ruby on rails
+// 							</li>
+// 							<li>
+// 								css
+// 							</li>
+// 							<li>
+// 								JavaScript
+// 							</li>
+// 							<li>
+// 								html
+// 							</li>
+// 						</ul>
+// 					</div>
+// 					<div class="card-see-prjct">
+// 						<button class="green-button" id="cProject${i}" type="button">See Project</button>
+// 					</div>
+// 					</div>
+// 			</div>
+//   `
+// })
 
-document.getElementById("cProject").addEventListener("click", () => {
-  if (x.matches) {
-    console.log("desktop")
-  } else {
-    console.log("mobile")
-    console.log(popupData[0].badges)
+document.querySelectorAll(".cProject").forEach((cl) => {
+  cl.addEventListener("click", (e) => {
+    let btnId = e.target.id
+    let inHtml = ""
+
     const sec = document.createElement("section")
     sec.setAttribute('id', 'modal')
     sec.setAttribute('class', 'modal')
-    const secHeader = document.createElement("div")
-    secHeader.setAttribute('class', 'modal-header')
 
-    sec.appendChild(secHeader)
     document.querySelector(".main-container").appendChild(sec)
-    document.querySelector(".modal-header").innerHTML = `
-    <img src="./imgs/Snapshoot_Mobiles.svg" alt="Mobile Snapshot">
-    <a>
-      <i id="closePopupIcon" class="fa-solid fa-xmark"></i>
-    </a>`
-  }
-})
+    
+    popupData.forEach((data, i) => {
 
+      
+      if (data.idx == btnId) {
+        inHtml = `
+          <div class="modal-header">
+            <a>
+            <i id="closePopupIcon" class="fa-solid fa-xmark"></i>
+            </a>
+            <img id="popupimg" src="${data.ftimg}" alt="Mobile Snapshot">
+          </div>
+
+        `
+        // If screen is desktop
+        if (x.matches) {
+          console.log("desktop")
+
+        // If screen is mobile
+        } else {
+          console.log("mobile")
+              inHtml += `
+
+              <div class="modal-sub">
+                <p>Keeping track of hundreds of components</p>
+              <div class="modal-badges">
+                <ul>`
+              data.badges.forEach((a) => {
+                  inHtml += `<li> ${a} </li>`
+                })
+              inHtml += `
+                </ul>
+                </div>
+              </div>
+              <div class="modal-p">
+                <p>${data.p}</p>
+              </div>
+              <div class="modal-buttons">
+              <button class="green-button" type="button">
+                See Live <img src="./imgs/cmore-icon.png">
+              </button>
+              <button class="green-button" type="button">
+                See Source <img src="./imgs/github-icon.png">
+              </button>
+              </div>
+              
+              `
+            }
+          }
+
+      })
+      document.querySelector(".modal").innerHTML = inHtml
+
+      document.getElementById("closePopupIcon").addEventListener("click", () => {
+        sec.parentNode.removeChild(sec)
+      })
+  })
+})
