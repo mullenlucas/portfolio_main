@@ -1,3 +1,5 @@
+import { popupData } from "./popups.js";
+
 const hambIcon = document.getElementById('hamburgerIcon');
 const closeIcon = document.getElementById('closeIcon');
 const menuItems = document.getElementById('myMenuItems');
@@ -38,24 +40,24 @@ const hideItems = () => {
   footer.style.display = 'block';
   toggleDivs.style.visibility = 'visible';
 };
+
+// ### Handling the hamburger menu ###
 // Handling hamburgerMenu open/close behavior
-/* eslint-disable no-unused-vars */
-const hamburgerMenu = () => {
+document.getElementById("menuHamburger").addEventListener("click", () => {
   if (hambIcon.style.display === 'block') {
     showItems();
   } else {
     hideItems();
   }
-};
-// Handling hamburgerMenu open/close behavior when clicking item
-/* exported modal */
-const adaptHamburgerMenu = () => {
+})
+// Handling when an item from the menu is clicked
+document.querySelector(".menuItem").addEventListener("click", () => {
   const menuItems = document.getElementById('myMenuItems');
   if (menuItems.style.display === 'flex') {
     hideItems();
   }
-};
-/* eslint-enable no-unused-vars */
+})
+
 /* When changing screen-size after closing the hamburger menu
 (therefore, hiding the "menuItems" list)
 so the items remain hidden on desktop.
@@ -75,3 +77,61 @@ x.onchange = (e) => {
     menuItems.style.visibility = 'hidden';
   }
 };
+
+const worksContainer = document.createElement("div")
+worksContainer.setAttribute('class', 'main-container-works')
+let worksHtmlContainer = ""
+popupData.forEach( () => {
+  worksHtmlContainer += `
+  <div class="grid-container-works">
+					<div class="grey-bckgd"></div>
+					<div class="card-contents">
+					<div class="card-subt">
+						<h3>Multi-Post Stories Gain+Glory</h3>
+					</div>
+					<div class="card-buttons">
+						<ul>
+							<li>
+								Ruby on rails
+							</li>
+							<li>
+								css
+							</li>
+							<li>
+								JavaScript
+							</li>
+							<li>
+								html
+							</li>
+						</ul>
+					</div>
+					<div class="card-see-prjct">
+						<button class="green-button" id="cProject${i}" type="button">See Project</button>
+					</div>
+					</div>
+			</div>
+  `
+})
+
+document.getElementById("cProject").addEventListener("click", () => {
+  if (x.matches) {
+    console.log("desktop")
+  } else {
+    console.log("mobile")
+    console.log(popupData[0].badges)
+    const sec = document.createElement("section")
+    sec.setAttribute('id', 'modal')
+    sec.setAttribute('class', 'modal')
+    const secHeader = document.createElement("div")
+    secHeader.setAttribute('class', 'modal-header')
+
+    sec.appendChild(secHeader)
+    document.querySelector(".main-container").appendChild(sec)
+    document.querySelector(".modal-header").innerHTML = `
+    <img src="./imgs/Snapshoot_Mobiles.svg" alt="Mobile Snapshot">
+    <a>
+      <i id="closePopupIcon" class="fa-solid fa-xmark"></i>
+    </a>`
+  }
+})
+

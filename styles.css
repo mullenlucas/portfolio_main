@@ -1,5 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
+.modal {
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border: 1px solid #DFE1E6;
+  border-radius: 16px;
+  z-index: 9;
+  background-color: #ffffff;
+  width: 343px;
+  max-width: 80%;
+  /* height: 836px; */
+}
+
+.modal-header {
+  padding: 16px;
+  position: relative;
+}
+
+.modal-header img {
+  display: block;
+}
+
+.modal-header a {
+  position: absolute;
+  top: 13%;
+  right: 10.8%;
+}
+
+#closePopupIcon {
+  font-size: 24px;
+  color: #fff;
+}
+
+.modal-sub {
+  padding-left: 16px;
+  width: 259px;
+}
+
+.modal-sub p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172B4D;
+}
+
+.modal-p {
+  padding: 0 16px 0 16px;
+}
+
+.modal-p p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.modal-buttons {
+  /* padding: 16px; */
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.modal-buttons button img {
+  padding-left: 16px;
+}
+
 #hamburgerIcon {
   display: block;
   visibility: visible;
@@ -88,7 +160,7 @@
   color: #3a4a42;
 }
 
-.card-buttons ul {
+.card-buttons ul, .modal-badges ul {
   list-style-type: none;
   flex-direction: row;
   margin: 0;
@@ -97,7 +169,7 @@
   justify-content: space-around;
 }
 
-.card-buttons ul li {
+.card-buttons ul li, .modal-badges ul li {
   border: none;
   border-radius: 4px;
   font-family: 'Inter', sans-serif;
