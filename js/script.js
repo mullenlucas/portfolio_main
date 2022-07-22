@@ -141,6 +141,32 @@ document.querySelectorAll(".cProject").forEach((cl) => {
         if (x.matches) {
           console.log("desktop")
 
+          inHtml += `
+          <div class="modal-sub">
+          <p>Keeping track of hundreds of components</p>
+            <div class="modal-buttons">
+              <button class="green-button" type="button">
+                See Live <img src="./imgs/cmore-icon.png">
+              </button>
+              <button class="green-button" type="button">
+                See Source <img src="./imgs/github-icon.png">
+              </button>
+            </div>
+          </div>
+          <div class="modal-badges">
+            <ul>
+          `
+          data.badges.forEach((a) => {
+            inHtml += `<li> ${a} </li>`
+          })
+          inHtml += `
+          </ul>
+          </div>
+          <div class="modal-p">
+            <p>${data.p}</p>
+          </div>
+          `
+
         // If screen is mobile
         } else {
           console.log("mobile")
