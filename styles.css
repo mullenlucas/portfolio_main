@@ -421,8 +421,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: -10%;
-
-    /* height: 240px; */
   }
 
   .cards-about-me {
@@ -465,8 +463,6 @@
   .contact form ul {
     display: flex;
     flex-direction: column;
-
-    /* align-items: center; */
     margin: 0;
     padding: 0;
     width: 684px;
@@ -763,7 +759,7 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
-    padding: 15px 16px;
+    padding: 16px;
     color: #6b778c;
   }
 
