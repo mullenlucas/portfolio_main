@@ -45,21 +45,21 @@ export const popupData = [
   {
     idx: "cP4",
     subTitle: subTitle,
-    ftimg: "./imgs/Snapshoot_Mobile.png",
+    ftimg: "./imgs/Snapshoot_Mobiles.svg",
     badges: ["Ruby on rails", "css", "Javascript"],
     p: pContent
   },
   {
     idx: "cP5",
     subTitle: subTitle,
-    ftimg: "./imgs/Snapshoot_Mobile.png",
+    ftimg: "./imgs/Snapshoot_Mobiles.svg",
     badges: ["Ruby on rails", "css", "Javascript"],
     p: pContent
   },
   {
     idx: "cP6",
     subTitle: subTitle,
-    ftimg: "./imgs/Snapshoot_Mobile.png",
+    ftimg: "./imgs/Snapshoot_Mobiles.svg",
     badges: ["Ruby on rails", "css", "Javascript"],
     p: pContent
   },

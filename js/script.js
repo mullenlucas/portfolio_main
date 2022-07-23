@@ -78,55 +78,24 @@ x.onchange = (e) => {
   }
 };
 
-// const worksContainer = document.createElement("div")
-// worksContainer.setAttribute('class', 'main-container-works')
-// let worksHtmlContainer = ""
-// popupData.forEach( () => {
-//   worksHtmlContainer += `
-//   <div class="grid-container-works">
-// 					<div class="grey-bckgd"></div>
-// 					<div class="card-contents">
-// 					<div class="card-subt">
-// 						<h3>Multi-Post Stories Gain+Glory</h3>
-// 					</div>
-// 					<div class="card-buttons">
-// 						<ul>
-// 							<li>
-// 								Ruby on rails
-// 							</li>
-// 							<li>
-// 								css
-// 							</li>
-// 							<li>
-// 								JavaScript
-// 							</li>
-// 							<li>
-// 								html
-// 							</li>
-// 						</ul>
-// 					</div>
-// 					<div class="card-see-prjct">
-// 						<button class="green-button" id="cProject${i}" type="button">See Project</button>
-// 					</div>
-// 					</div>
-// 			</div>
-//   `
-// })
 
 document.querySelectorAll(".cProject").forEach((cl) => {
   cl.addEventListener("click", (e) => {
     let btnId = e.target.id
     let inHtml = ""
 
+    const overlay = document.createElement("div")
+    overlay.setAttribute('class', 'overdy')
+    overlay.setAttribute('id', "overlay-id")
+    document.body.appendChild(overlay)
+
     const sec = document.createElement("section")
     sec.setAttribute('id', 'modal')
     sec.setAttribute('class', 'modal')
-
     document.querySelector(".main-container").appendChild(sec)
-    
-    popupData.forEach((data, i) => {
 
-      
+    popupData.forEach((data) => {
+
       if (data.idx == btnId) {
         inHtml = `
           <div class="modal-header">
@@ -140,6 +109,8 @@ document.querySelectorAll(".cProject").forEach((cl) => {
         // If screen is desktop
         if (x.matches) {
           console.log("desktop")
+
+          // document.querySelector('.modal-header').
 
           inHtml += `
           <div class="modal-sub">
@@ -166,7 +137,6 @@ document.querySelectorAll(".cProject").forEach((cl) => {
             <p>${data.p}</p>
           </div>
           `
-
         // If screen is mobile
         } else {
           console.log("mobile")
@@ -204,6 +174,14 @@ document.querySelectorAll(".cProject").forEach((cl) => {
 
       document.getElementById("closePopupIcon").addEventListener("click", () => {
         sec.parentNode.removeChild(sec)
+        document.body.removeChild(overlay)
       })
+    
+      // Close popup when clicking outside
+    overlay.addEventListener('click', () => {
+      sec.parentNode.removeChild(sec)
+      document.body.removeChild(overlay)
+    })
   })
 })
+
