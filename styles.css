@@ -458,19 +458,23 @@
   }
 
   #about-me {
-    margin-top: 360px;
+    margin-top: 15%;
   }
 
   .top-about-me {
     background-image:
       url('./imgs/illustration-about-me-1-desktop.svg'),
       url('./imgs/illustration-about-me-2-desktop.svg');
-    background-position: right, left bottom;
+    background-position: right top, left 80%;
     background-repeat: no-repeat, no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: -10%;
+  }
+
+  #about-me-p-text {
+    width: 50%;
+    height: 100%
   }
 
   .cards-about-me {
