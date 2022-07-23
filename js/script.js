@@ -208,3 +208,18 @@ document.querySelectorAll('.cProject').forEach((cl) => {
     });
   });
 });
+
+const email = document.getElementById('email');
+const form = document.getElementById('contact-form-id');
+const emailLabel = document.getElementById('email-label');
+
+form.addEventListener('submit', (formy) => {
+  if (email.value.toLowerCase() !== email.value.toUpperCase()) {
+    formy.preventDefault();
+    emailLabel.innerHTML = 'E-mail cannot have upper-case letters. Transforming to lower-case';
+    email.value = email.value.toLowerCase();
+  }
+});
+email.addEventListener('change', () => {
+  if (emailLabel.innerHTML !== '') emailLabel.innerHTML = '';
+});
