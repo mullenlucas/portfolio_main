@@ -208,20 +208,3 @@ document.querySelectorAll('.cProject').forEach((cl) => {
     });
   });
 });
-
-const email = document.getElementById('email')
-const form = document.getElementById('contact-form-id')
-
-form.addEventListener('submit', (formy) => {
-
-  // if(email.value.toLowerCase() !== email.value.toUpperCase()){
-  //   console.log("dected")
-  // }
-  const regex = /[A-Z]/g
-  if(regex.test(email.value)){
-    formy.preventDefault()
-    alert(`Error: e-mail form should be lower case. 
-    Transforming to lower case, ready to send`)
-    email.value = email.value.toLowerCase()
-  }
-})
