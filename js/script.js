@@ -1,4 +1,4 @@
-import { popupData } from "./popups.js";
+import { popupData, liveBtnTxt, githubBtnTxt } from './popups.js';
 
 const hambIcon = document.getElementById('hamburgerIcon');
 const closeIcon = document.getElementById('closeIcon');
@@ -43,20 +43,20 @@ const hideItems = () => {
 
 // ### Handling the hamburger menu ###
 // Handling hamburgerMenu open/close behavior
-document.getElementById("menuHamburger").addEventListener("click", () => {
+document.getElementById('menuHamburger').addEventListener('click', () => {
   if (hambIcon.style.display === 'block') {
     showItems();
   } else {
     hideItems();
   }
-})
+});
 // Handling when an item from the menu is clicked
-document.querySelector(".menuItem").addEventListener("click", () => {
+document.querySelector('.menuItem').addEventListener('click', () => {
   const menuItems = document.getElementById('myMenuItems');
   if (menuItems.style.display === 'flex') {
     hideItems();
   }
-})
+});
 
 /* When changing screen-size after closing the hamburger menu
 (therefore, hiding the "menuItems" list)
@@ -78,25 +78,23 @@ x.onchange = (e) => {
   }
 };
 
+document.querySelectorAll('.cProject').forEach((cl) => {
+  cl.addEventListener('click', (e) => {
+    const btnId = e.target.id;
+    let inHtml = '';
 
-document.querySelectorAll(".cProject").forEach((cl) => {
-  cl.addEventListener("click", (e) => {
-    let btnId = e.target.id
-    let inHtml = ""
+    const overlay = document.createElement('div');
+    overlay.setAttribute('class', 'overdy');
+    overlay.setAttribute('id', 'overlay-id');
+    document.body.appendChild(overlay);
 
-    const overlay = document.createElement("div")
-    overlay.setAttribute('class', 'overdy')
-    overlay.setAttribute('id', "overlay-id")
-    document.body.appendChild(overlay)
-
-    const sec = document.createElement("section")
-    sec.setAttribute('id', 'modal')
-    sec.setAttribute('class', 'modal')
-    document.querySelector(".main-container").appendChild(sec)
+    const sec = document.createElement('section');
+    sec.setAttribute('id', 'modal');
+    sec.setAttribute('class', 'modal');
+    document.querySelector('.main-container').appendChild(sec);
 
     popupData.forEach((data) => {
-
-      if (data.idx == btnId) {
+      if (data.idx === btnId) {
         inHtml = `
           <div class="modal-header">
             <a>
@@ -105,51 +103,46 @@ document.querySelectorAll(".cProject").forEach((cl) => {
             <img id="popupimg" src="${data.ftimg}" alt="Mobile Snapshot">
           </div>
 
-        `
+        `;
         // If screen is desktop
         if (x.matches) {
-          console.log("desktop")
-
-          // document.querySelector('.modal-header').
-
           inHtml += `
           <div class="modal-sub">
           <p>Keeping track of hundreds of components</p>
             <div class="modal-buttons">
               <button class="green-button" type="button">
-                See Live <img src="./imgs/cmore-icon.png">
+              ${liveBtnTxt} <img src="./imgs/cmore-icon.png">
               </button>
               <button class="green-button" type="button">
-                See Source <img src="./imgs/github-icon.png">
+              ${githubBtnTxt} <img src="./imgs/github-icon.png">
               </button>
             </div>
           </div>
           <div class="modal-badges">
             <ul>
-          `
+          `;
           data.badges.forEach((a) => {
-            inHtml += `<li> ${a} </li>`
-          })
+            inHtml += `<li> ${a} </li>`;
+          });
           inHtml += `
           </ul>
           </div>
           <div class="modal-p">
             <p>${data.p}</p>
           </div>
-          `
-        // If screen is mobile
+          `;
+          // If screen is mobile
         } else {
-          console.log("mobile")
-              inHtml += `
+          inHtml += `
 
               <div class="modal-sub">
-                <p>Keeping track of hundreds of components</p>
+                <p>${data.subTitle}</p>
               <div class="modal-badges">
-                <ul>`
-              data.badges.forEach((a) => {
-                  inHtml += `<li> ${a} </li>`
-                })
-              inHtml += `
+                <ul>`;
+          data.badges.forEach((a) => {
+            inHtml += `<li> ${a} </li>`;
+          });
+          inHtml += `
                 </ul>
                 </div>
               </div>
@@ -158,30 +151,28 @@ document.querySelectorAll(".cProject").forEach((cl) => {
               </div>
               <div class="modal-buttons">
               <button class="green-button" type="button">
-                See Live <img src="./imgs/cmore-icon.png">
+                ${liveBtnTxt} <img src="./imgs/cmore-icon.png">
               </button>
               <button class="green-button" type="button">
-                See Source <img src="./imgs/github-icon.png">
+                ${githubBtnTxt} <img src="./imgs/github-icon.png">
               </button>
               </div>
               
-              `
-            }
-          }
+              `;
+        }
+      }
+    });
+    document.querySelector('.modal').innerHTML = inHtml;
 
-      })
-      document.querySelector(".modal").innerHTML = inHtml
+    document.getElementById('closePopupIcon').addEventListener('click', () => {
+      sec.parentNode.removeChild(sec);
+      document.body.removeChild(overlay);
+    });
 
-      document.getElementById("closePopupIcon").addEventListener("click", () => {
-        sec.parentNode.removeChild(sec)
-        document.body.removeChild(overlay)
-      })
-    
-      // Close popup when clicking outside
+    // Close popup when clicking outside
     overlay.addEventListener('click', () => {
-      sec.parentNode.removeChild(sec)
-      document.body.removeChild(overlay)
-    })
-  })
-})
-
+      sec.parentNode.removeChild(sec);
+      document.body.removeChild(overlay);
+    });
+  });
+});
