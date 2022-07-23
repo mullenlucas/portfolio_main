@@ -1,4 +1,5 @@
 export const subTitle = 'Keeping track of hundreds of components';
+export const workTitle = 'Multi-Post Stories Gain+Glory';
 export const liveBtnTxt = 'See Live';
 export const githubBtnTxt = 'See Source';
 
@@ -10,6 +11,7 @@ export const popupData = [
     idx: 'cP1',
     subTitle,
     ftimg: './imgs/Snapshoot_Desktop.png',
+    reducedBadges: ['Ruby on rails', 'css', 'Javascript', 'html'],
     badges: [
       'Codekit',
       'GitHub',
@@ -25,6 +27,7 @@ export const popupData = [
     idx: 'cP2',
     subTitle,
     ftimg: './imgs/Snapshoot_Desktop.png',
+    reducedBadges: ['Ruby on rails', 'css', 'Javascript', 'html'],
     badges: [
       'Codekit',
       'GitHub',
@@ -40,6 +43,7 @@ export const popupData = [
     idx: 'cP3',
     subTitle,
     ftimg: './imgs/Snapshoot_Desktop.png',
+    reducedBadges: ['Ruby on rails', 'css', 'Javascript', 'html'],
     badges: [
       'Codekit',
       'GitHub',
@@ -54,6 +58,7 @@ export const popupData = [
     idx: 'cP4',
     subTitle,
     ftimg: './imgs/Snapshoot_Mobiles.svg',
+    reducedBadges: ['Ruby on rails', 'css', 'Javascript', 'html'],
     badges: ['Ruby on rails', 'css', 'Javascript'],
     p: pContent,
   },
@@ -61,6 +66,7 @@ export const popupData = [
     idx: 'cP5',
     subTitle,
     ftimg: './imgs/Snapshoot_Mobiles.svg',
+    reducedBadges: ['Ruby on rails', 'css', 'Javascript', 'html'],
     badges: ['Ruby on rails', 'css', 'Javascript'],
     p: pContent,
   },
@@ -68,6 +74,7 @@ export const popupData = [
     idx: 'cP6',
     subTitle,
     ftimg: './imgs/Snapshoot_Mobiles.svg',
+    reducedBadges: ['Ruby on rails', 'css', 'Javascript', 'html'],
     badges: ['Ruby on rails', 'css', 'Javascript'],
     p: pContent,
   },

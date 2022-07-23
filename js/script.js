@@ -1,4 +1,6 @@
-import { popupData, liveBtnTxt, githubBtnTxt } from './popups.js';
+import {
+  popupData, liveBtnTxt, githubBtnTxt, workTitle,
+} from './popups.js';
 
 const hambIcon = document.getElementById('hamburgerIcon');
 const closeIcon = document.getElementById('closeIcon');
@@ -77,6 +79,36 @@ x.onchange = (e) => {
     menuItems.style.visibility = 'hidden';
   }
 };
+
+const worksContainer = document.createElement('div');
+worksContainer.setAttribute('class', 'main-container-works');
+worksContainer.setAttribute('id', 'works-container-id');
+document.getElementById('works-link').appendChild(worksContainer);
+let worksHtml = '';
+popupData.forEach((d) => {
+  worksHtml += `
+    <div class="grid-container-works">
+      <div class="grey-bckgd"></div>
+      <div class="card-contents">
+      <div class="card-subt">
+        <h3>${workTitle}</h3>
+      </div>
+      <div class="card-buttons">
+        <ul>`;
+
+  d.reducedBadges.forEach((b) => {
+    worksHtml += `<li> ${b} </li>`;
+  });
+  worksHtml += `</ul>
+      </div>
+      <div class="card-see-prjct">
+        <button class="green-button cProject" id="${d.idx}" type="button">See Project</button>
+      </div>
+      </div>
+    </div>
+    `;
+});
+worksContainer.innerHTML = worksHtml;
 
 document.querySelectorAll('.cProject').forEach((cl) => {
   cl.addEventListener('click', (e) => {
