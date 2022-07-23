@@ -227,19 +227,19 @@ email.addEventListener('change', () => {
 const usrFields = {
   fullname: document.getElementById('name'),
   email: document.getElementById('email'),
-  message: document.getElementById('message')
-}
+  message: document.getElementById('message'),
+};
 
-document.querySelectorAll('.form-field').forEach( (f) => {
+document.querySelectorAll('.form-field').forEach((f) => {
   f.addEventListener('change', () => {
-    window.localStorage.setItem('fullname', usrFields['fullname'].value.toString())
-    window.localStorage.setItem('email', usrFields['email'].value.toString())
-    window.localStorage.setItem('message', usrFields['message'].value.toString())
-  })
-})
+    window.localStorage.setItem('fullname', usrFields.fullname.value.toString());
+    window.localStorage.setItem('email', usrFields.email.value.toString());
+    window.localStorage.setItem('message', usrFields.message.value.toString());
+  });
+});
 
-Object.keys(window.localStorage).forEach( (d) => {
-  if( window.localStorage[d] !== "") {
-    usrFields[d].value = window.localStorage[d]
+Object.keys(window.localStorage).forEach((d) => {
+  if (window.localStorage[d] !== '') {
+    usrFields[d].value = window.localStorage[d];
   }
-})
+});
