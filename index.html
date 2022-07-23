@@ -15,23 +15,24 @@
 		<a href="#" onClick="return false;" class="title">
 			Welcome
 		</a>
-		<a class="icon" onClick="hamburgerMenu()">
+		<a class="icon" id="menuHamburger">
 			<i id="hamburgerIcon" class="fa-solid fa-bars"></i>
 			<i id="closeIcon" class="fa-solid fa-xmark"></i>
 		</a>
 	</nav>
 	</header>
+	<div class="overlay"></div>
 	<section class="main-container">
 		<div class="headline">
 			<ul class="menu-header-items" id="myMenuItems">
 				<li>
-					<a href="#works-link" class="menuItem" onClick="adaptHamburgerMenu()"> Portfolio </a>
+					<a href="#works-link" class="menuItem"> Portfolio </a>
 				</li>
 				<li>
-					<a href="#about-me" class="menuItem" onClick="adaptHamburgerMenu()"> About </a>
+					<a href="#about-me" class="menuItem"> About </a>
 				</li>
 				<li>
-					<a href="#contact-link" class="menuItem" onClick="adaptHamburgerMenu()"> Contact </a>
+					<a href="#contact-link" class="menuItem"> Contact </a>
 				</li>
 			</ul>
 			<div class="intro-txt">
@@ -70,171 +71,7 @@
 			<h2 class="section-title" id="works-txt-id">My Recent Works</h2>
 			<img class="div-img" src="imgs/Indicator.png" alt="div-img">
 		</div>
-		<div class="main-container-works">
-			<div class="grid-container-works">
-					<div class="grey-bckgd"></div>
-					<div class="card-contents">
-					<div class="card-subt">
-						<h3>Multi-Post Stories Gain+Glory</h3>
-					</div>
-					<div class="card-buttons">
-						<ul>
-							<li>
-								Ruby on rails
-							</li>
-							<li>
-								css
-							</li>
-							<li>
-								JavaScript
-							</li>
-							<li>
-								html
-							</li>
-						</ul>
-					</div>
-					<div class="card-see-prjct">
-						<button class="green-button" type="button">See Project</button>
-					</div>
-					</div>
-			</div>
-			<div class="grid-container-works">
-					<div class="grey-bckgd"></div>
-					<div class="card-contents">
-					<div class="card-subt">
-						<h3>Multi-Post Stories Gain+Glory</h3>
-					</div>
-					<div class="card-buttons">
-						<ul>
-							<li>
-								Ruby on rails
-							</li>
-							<li>
-								css
-							</li>
-							<li>
-								JavaScript
-							</li>
-							<li>
-								html
-							</li>
-						</ul>
-					</div>
-					<div class="card-see-prjct">
-						<button class="green-button" type="button">See Project</button>
-					</div>
-					</div>
-			</div>
-			<div class="grid-container-works">
-					<div class="grey-bckgd"></div>
-					<div class="card-contents">
-					<div class="card-subt">
-						<h3>Multi-Post Stories Gain+Glory</h3>
-					</div>
-					<div class="card-buttons">
-						<ul>
-							<li>
-								Ruby on rails
-							</li>
-							<li>
-								css
-							</li>
-							<li>
-								JavaScript
-							</li>
-							<li>
-								html
-							</li>
-						</ul>
-					</div>
-					<div class="card-see-prjct">
-						<button class="green-button" type="button">See Project</button>
-					</div>
-					</div>
-			</div>
-			<div class="grid-container-works">
-					<div class="grey-bckgd"></div>
-					<div class="card-contents">
-					<div class="card-subt">
-						<h3>Multi-Post Stories Gain+Glory</h3>
-					</div>
-					<div class="card-buttons">
-						<ul>
-							<li>
-								Ruby on rails
-							</li>
-							<li>
-								css
-							</li>
-							<li>
-								JavaScript
-							</li>
-							<li>
-								html
-							</li>
-						</ul>
-					</div>
-					<div class="card-see-prjct">
-						<button class="green-button" type="button">See Project</button>
-					</div>
-					</div>
-			</div>
-			<div class="grid-container-works">
-					<div class="grey-bckgd"></div>
-					<div class="card-contents">
-					<div class="card-subt">
-						<h3>Multi-Post Stories Gain+Glory</h3>
-					</div>
-					<div class="card-buttons">
-						<ul>
-							<li>
-								Ruby on rails
-							</li>
-							<li>
-								css
-							</li>
-							<li>
-								JavaScript
-							</li>
-							<li>
-								html
-							</li>
-						</ul>
-					</div>
-					<div class="card-see-prjct">
-						<button class="green-button" type="button">See Project</button>
-					</div>
-					</div>
-			</div>
-			<div class="grid-container-works">
-					<div class="grey-bckgd"></div>
-					<div class="card-contents">
-					<div class="card-subt">
-						<h3>Multi-Post Stories Gain+Glory</h3>
-					</div>
-					<div class="card-buttons">
-						<ul>
-							<li>
-								Ruby on rails
-							</li>
-							<li>
-								css
-							</li>
-							<li>
-								JavaScript
-							</li>
-							<li>
-								html
-							</li>
-						</ul>
-					</div>
-					<div class="card-see-prjct">
-						<button class="green-button" type="button">See Project</button>
-					</div>
-					</div>
-			</div>
-		</div>
-		
+
 	</section>
 	<section id="about-me">
 		<div class="top-about-me">
@@ -377,6 +214,6 @@
 		<p>mullenlucas@gmail.com</p>
 	</footer>
 	
-	<script src="js/script.js" type="text/javascript"></script>
+	<script src="js/script.js" type="module"></script>
 </body>
 </html>

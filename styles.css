@@ -1,5 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
+.overdy {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 94;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  z-index: 99;
+  background-color: #fff;
+  max-height: 80vh;
+  overflow-y: scroll;
+  padding: 16px;
+}
+
+#closePopupIcon {
+  font-size: 24px;
+}
+
+.modal-sub p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+}
+
+.modal-badges ul {
+  list-style-type: none;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+  column-gap: 8px;
+  row-gap: 8px;
+}
+
+.modal-p p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+}
+
 #hamburgerIcon {
   display: block;
   visibility: visible;
@@ -95,9 +154,11 @@
   padding: 0;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.card-buttons ul li {
+.card-buttons ul li,
+.modal-badges ul li {
   border: none;
   border-radius: 4px;
   font-family: 'Inter', sans-serif;
@@ -205,7 +266,7 @@
   }
 
   .main-container {
-    background-image: url("./imgs/Header-llustration-desktop@1x.svg");
+    background-image: url('./imgs/Header-llustration-desktop@1x.svg');
     background-repeat: no-repeat;
     background-position: center bottom 100%;
     background-size: cover;
@@ -216,6 +277,62 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .modal {
+    width: 60%;
+    max-width: 60%;
+  }
+
+  .modal-header img {
+    width: auto;
+    max-width: 100%;
+    max-height: 616px;
+    align-content: center;
+    display: block;
+    margin: auto;
+  }
+
+  .modal-header a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    width: 40px;
+    height: 40px;
+    background: #ebecf0;
+    border-radius: 8px;
+  }
+
+  .modal-sub {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .modal-sub p {
+    width: 80%;
+    font-weight: 700;
+  }
+
+  .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    column-gap: 12px;
+    width: 60%;
+    padding-top: 16px;
+  }
+
+  .modal-buttons button {
+    display: flex;
+    padding: 16px;
+  }
+
+  .modal-buttons button img {
+    padding-left: 16px;
   }
 
   .intro-txt {
@@ -295,7 +412,9 @@
   }
 
   .top-about-me {
-    background-image: url("./imgs/illustration-about-me-1-desktop.svg"), url("./imgs/illustration-about-me-2-desktop.svg");
+    background-image:
+      url('./imgs/illustration-about-me-1-desktop.svg'),
+      url('./imgs/illustration-about-me-2-desktop.svg');
     background-position: right, left bottom;
     background-repeat: no-repeat, no-repeat;
     display: flex;
@@ -318,7 +437,10 @@
   }
 
   .contact {
-    background-image: url("./imgs/illustration-1-contact-form-desktop.svg"), url("./imgs/illustration-2-contact-form-desktop.svg"), url("./imgs/illustratoin-3-contact-form-desktop.svg");
+    background-image:
+      url('./imgs/illustration-1-contact-form-desktop.svg'),
+      url('./imgs/illustration-2-contact-form-desktop.svg'),
+      url('./imgs/illustratoin-3-contact-form-desktop.svg');
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: left bottom, left 20% bottom 20%, right;
     display: flex;
@@ -404,9 +526,32 @@
     visibility: hidden;
   }
 
-  #myLogo {
+  .modal {
+    width: 80%;
+    max-width: 80%;
+  }
+
+  #closePopupIcon {
+    color: #fff;
+  }
+
+  .modal-header {
+    position: relative;
+  }
+
+  .modal-header img {
     display: block;
-    visibility: visible;
+    max-width: 100%;
+  }
+
+  .modal-header a {
+    position: absolute;
+    top: 13%;
+    right: 10.8%;
+  }
+
+  .modal-sub {
+    width: 259px;
   }
 
   footer p {
@@ -417,6 +562,26 @@
     line-height: 32px;
     text-align: center;
     color: #42526e;
+  }
+
+  .modal-sub p {
+    font-weight: 600;
+  }
+
+  .modal-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .modal-buttons button {
+    display: flex;
+    column-gap: 16px;
+  }
+
+  #myLogo {
+    display: block;
+    visibility: visible;
   }
 
   .nav-bar {
@@ -448,7 +613,7 @@
   }
 
   .headline {
-    background-image: url("./imgs/header-illsutration-mobile@1x.png");
+    background-image: url('./imgs/header-illsutration-mobile@1x.png');
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -539,7 +704,9 @@
 
   /* Resource: https://www.w3schools.com/css/css3_backgrounds.asp */
   .top-about-me {
-    background-image: url("./imgs/illustration1-aboutme-mobile.svg"), url("./imgs/illustration2-aboutme-mobile.svg");
+    background-image:
+      url('./imgs/illustration1-aboutme-mobile.svg'),
+      url('./imgs/illustration2-aboutme-mobile.svg');
     background-position: right top, left bottom;
     background-repeat: no-repeat, no-repeat;
     display: flex;
@@ -560,7 +727,7 @@
   }
 
   .contact {
-    background-image: url("./imgs/illustration-contact-form.svg");
+    background-image: url('./imgs/illustration-contact-form.svg');
     background-position: right bottom 6%;
     background-repeat: no-repeat;
     display: flex;
