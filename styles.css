@@ -254,6 +254,56 @@
   padding: 12px;
 }
 
+.contact form ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.contact form ul li {
+  list-style: none;
+}
+
+.contact form ul li input {
+  background: #fff;
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
+  height: 48px;
+  margin-bottom: 24px;
+  padding: 12px;
+}
+
+.contact form ul li input::placeholder {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.contact form ul li textarea {
+  background: #fff;
+  border: 1px solid #60c095;
+  border-radius: 4px;
+  height: 114px;
+  margin-bottom: 24px;
+  padding: 12px;
+}
+
+.contact form ul li input:focus, .contact form ul li textarea:focus {
+  outline-color:#36b37e
+}
+
+.contact form ul li textarea::placeholder {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #091e42;
+}
+
 @media (min-width: 768px) {
   header {
     display: none;
@@ -461,10 +511,6 @@
   }
 
   .contact form ul {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
     width: 684px;
   }
 
@@ -473,41 +519,15 @@
   }
 
   .contact form ul li input {
-    background: #fff;
-    border: 1px solid #d0d9d4;
-    border-radius: 4px;
     width: 98%;
-    height: 48px;
-    margin-bottom: 24px;
   }
 
   .contact form ul li input::placeholder {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 24px;
-    padding: 15px 16px;
     color: #6b778c;
   }
 
   .contact form ul li textarea {
-    background: #fff;
-    border: 1px solid #60c095;
-    border-radius: 4px;
     width: 98%;
-    height: 114px;
-    margin-bottom: 24px;
-  }
-
-  .contact form ul li textarea::placeholder {
-    padding: 12px;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 24px;
-    color: #091e42;
   }
 
   .contact form button {
@@ -733,53 +753,19 @@
   }
 
   .contact form ul {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  .contact form ul li {
-    list-style: none;
   }
 
   .contact form ul li input {
-    background: #fff;
-    border: 1px solid #d0d9d4;
-    border-radius: 4px;
     width: 327px;
-    height: 48px;
-    margin-bottom: 24px;
   }
 
   .contact form ul li input::placeholder {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 24px;
-    padding: 16px;
     color: #6b778c;
   }
 
   .contact form ul li textarea {
-    background: #fff;
-    border: 1px solid #60c095;
-    border-radius: 4px;
     width: 327px;
-    height: 114px;
-    margin-bottom: 24px;
-  }
-
-  .contact form ul li textarea::placeholder {
-    padding: 12px;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 24px;
-    color: #091e42;
   }
 
   .contact form button {
