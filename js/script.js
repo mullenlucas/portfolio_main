@@ -208,3 +208,13 @@ document.querySelectorAll('.cProject').forEach((cl) => {
     });
   });
 });
+const email = document.getElementById('email')
+const form = document.getElementById('contact-form-id')
+
+form.addEventListener('submit', (formy) => {
+  if(email.value.toLowerCase() !== email.value.toUpperCase()){
+    console.log("dected")
+    formy.preventDefault()
+  }
+})
+
